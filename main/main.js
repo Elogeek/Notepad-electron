@@ -18,6 +18,7 @@ function makeWindow() {
     mainWindow = new BrowserWindow({
         width: 1200,
         height: 800,
+        title: "Notepad",
         show: false,
         icon: path.resolve(__dirname, '../assets/images/icon.png'),
         webPreferences: {

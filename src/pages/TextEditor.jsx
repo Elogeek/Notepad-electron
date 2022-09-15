@@ -16,7 +16,6 @@ export const TextEditor = function({theme}) {
     return(
         <AppWrapper theme={theme}>
             <h2>Editeur de texte</h2>
-            <span>La valeur du paramètre est {maCle}</span>
             <TextEditorArea
                 id={'text-editor'}
                 value={content}
@@ -42,27 +41,12 @@ export const TextEditor = function({theme}) {
                     onClick={() => window.file.read().then(data => setContent(data))}
                 />
 
-                {/* Mise a jour de la valeur du paramètre stocké ma_cle depuis le script de préchargement vers le main process */}
-                <Button
-                    justifyContent={'start'}
-                    value="Set le paramètre ma_cle"
-                    onClick={() => {
-                        window.storage.set('ma_cle', 'erreur_ici, mauvais type');
-                        window.storage.get('ma_cle').then(data => setMaCle(data));
-                    }}
-                />
-
                 <Button
                     justifyContent={'start'}
                     value="Sauvegarder en BDD"
                     onClick={() => window.database.createText(content)}
                 />
 
-                <Button
-                    justifyContent={'start'}
-                    value="Bouton appel API"
-                    onClick={() => window.api.postText(content)}
-                />
             </ButtonsContainer>
         </AppWrapper>
     );

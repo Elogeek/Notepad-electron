@@ -54,7 +54,7 @@ class ApplicationMenu {
                     click: () => {
                         dialog.showMessageBox(this.mainWindow, {
                             title: "Hello World !",
-                            message: "Ceci est un simple Hello world, n'en tenez pas compte et faites quelque chose d'intéressant à la place.",
+                            message: "Bienvenue sur Notaped-electron !",
                         })
                     },
                 }

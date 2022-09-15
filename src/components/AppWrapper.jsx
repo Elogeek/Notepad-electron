@@ -14,13 +14,13 @@ export const AppWrapper = function({children, theme}) {
         <>
             <SplashScreen isVisible={splash} title={"Tracker UpTo"}/>
             <AppTheme scheme={theme}/>
-            <NavBar title="Tracker" shadowOnScroll={true}>
+            <NavBar title="Notepad" shadowOnScroll={true}>
                 <h1>Projets</h1>
                 <div className="app-hr"></div>
                 <NavBarLink to="/" exact={true} text="Accueil"/>
                 <NavBarLink to="/editor" exact={true} text="Editeur de texte"/>
-                <NavBarLink to="/electron" text="Cours Electron" icon={<i className="icons10-grid-2"></i>}/>
-                <NavBarLink to="/react-native" text="Cours React Native" icon={<i className="icons10-columns"></i>}/>
+                <NavBarLink to="/" text="Page 2" icon={<i className="icons10-grid-2"></i>}/>
+                <NavBarLink to="/" text="Page 3" icon={<i className="icons10-columns"></i>}/>
             </NavBar>
             <NavPageContainer hasPadding={true} animateTransition={true}>
                 {children}

@@ -12,7 +12,7 @@ const App = ({theme}) => {
 
     return (
         <AppWrapper theme={theme}>
-            <h2>Hello from windows 10 React UI</h2>
+            <h2>Hello from Notepad</h2>
         </AppWrapper>
     )
 }
